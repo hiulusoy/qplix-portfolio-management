@@ -51,6 +51,7 @@ if (app.Environment.IsDevelopment())
     // Map OpenAPI endpoints
     app.MapOpenApi();
 }
+// Dummy commit
 
 // Enforce HTTPS redirection for security
 app.UseHttpsRedirection();
