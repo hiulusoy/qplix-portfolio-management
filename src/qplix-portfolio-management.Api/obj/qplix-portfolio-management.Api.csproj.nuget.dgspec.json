@@ -1,0 +1,405 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Api/qplix-portfolio-management.Api.csproj": {}
+  },
+  "projects": {
+    "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Api/qplix-portfolio-management.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Api/qplix-portfolio-management.Api.csproj",
+        "projectName": "qplix-portfolio-management.Api",
+        "projectPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Api/qplix-portfolio-management.Api.csproj",
+        "packagesPath": "/Users/hiulusoy/.nuget/packages/",
+        "outputPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/hiulusoy/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Application/qplix-portfolio-management.Application.csproj": {
+                "projectPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Application/qplix-portfolio-management.Application.csproj"
+              },
+              "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Domain/qplix-portfolio-management.Domain.csproj": {
+                "projectPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Domain/qplix-portfolio-management.Domain.csproj"
+              },
+              "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Infrastructure/qplix-portfolio-management.Infrastructure.csproj": {
+                "projectPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Infrastructure/qplix-portfolio-management.Infrastructure.csproj"
+              },
+              "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Persistence/qplix-portfolio-management.Persistence.csproj": {
+                "projectPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Persistence/qplix-portfolio-management.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Application/qplix-portfolio-management.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Application/qplix-portfolio-management.Application.csproj",
+        "projectName": "qplix-portfolio-management.Application",
+        "projectPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Application/qplix-portfolio-management.Application.csproj",
+        "packagesPath": "/Users/hiulusoy/.nuget/packages/",
+        "outputPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/hiulusoy/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Domain/qplix-portfolio-management.Domain.csproj": {
+                "projectPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Domain/qplix-portfolio-management.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Domain/qplix-portfolio-management.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Domain/qplix-portfolio-management.Domain.csproj",
+        "projectName": "qplix-portfolio-management.Domain",
+        "projectPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Domain/qplix-portfolio-management.Domain.csproj",
+        "packagesPath": "/Users/hiulusoy/.nuget/packages/",
+        "outputPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/hiulusoy/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Infrastructure/qplix-portfolio-management.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Infrastructure/qplix-portfolio-management.Infrastructure.csproj",
+        "projectName": "qplix-portfolio-management.Infrastructure",
+        "projectPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Infrastructure/qplix-portfolio-management.Infrastructure.csproj",
+        "packagesPath": "/Users/hiulusoy/.nuget/packages/",
+        "outputPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/hiulusoy/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Application/qplix-portfolio-management.Application.csproj": {
+                "projectPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Application/qplix-portfolio-management.Application.csproj"
+              },
+              "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Domain/qplix-portfolio-management.Domain.csproj": {
+                "projectPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Domain/qplix-portfolio-management.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Persistence/qplix-portfolio-management.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Persistence/qplix-portfolio-management.Persistence.csproj",
+        "projectName": "qplix-portfolio-management.Persistence",
+        "projectPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Persistence/qplix-portfolio-management.Persistence.csproj",
+        "packagesPath": "/Users/hiulusoy/.nuget/packages/",
+        "outputPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Persistence/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/hiulusoy/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Application/qplix-portfolio-management.Application.csproj": {
+                "projectPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Application/qplix-portfolio-management.Application.csproj"
+              },
+              "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Domain/qplix-portfolio-management.Domain.csproj": {
+                "projectPath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Domain/qplix-portfolio-management.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/qplix-portfolio-management.Api.props" />
+</Project>

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "DXRSOX50osg=",
+  "success": true,
+  "projectFilePath": "/Users/hiulusoy/Desktop/Development/Assignments/qplix-portfolio-management/qplix-portfolio-management/src/qplix-portfolio-management.Infrastructure/qplix-portfolio-management.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "/Users/hiulusoy/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.4/microsoft.extensions.configuration.abstractions.9.0.4.nupkg.sha512",
+    "/Users/hiulusoy/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.4/microsoft.extensions.dependencyinjection.abstractions.9.0.4.nupkg.sha512",
+    "/Users/hiulusoy/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.4/microsoft.extensions.logging.abstractions.9.0.4.nupkg.sha512",
+    "/Users/hiulusoy/.nuget/packages/microsoft.extensions.primitives/9.0.4/microsoft.extensions.primitives.9.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}

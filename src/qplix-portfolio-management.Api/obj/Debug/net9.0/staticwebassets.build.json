@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "6EcgheauiNX18w1AKf78LdbzrDdUmZqlo0xPFa9zfEI=",
+  "Source": "qplix-portfolio-management.Api",
+  "BasePath": "_content/qplix-portfolio-management.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
