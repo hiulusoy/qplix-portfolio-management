@@ -91,27 +91,27 @@ namespace qplix_portfolio_management.Infrastructure.Services
         private string CreatePrompt(PortfolioValueResponseDto portfolioData)
         {
             return $@"
-You are a professional financial advisor. Based on the following portfolio data as of {portfolioData.ReferenceDate:yyyy-MM-dd},
-please provide:
+            You are a professional financial advisor. Based on the following portfolio data as of {portfolioData.ReferenceDate:yyyy-MM-dd},
+            please provide:
 
-1. Exactly 3 specific investment recommendations
-2. Exactly 2 market predictions for the next 6 months
+            1. Exactly 3 specific investment recommendations
+            2. Exactly 2 market predictions for the next 6 months
 
-Portfolio data:
-- Total Portfolio Value: {portfolioData.TotalValue}
-- Number of investments: {portfolioData.InvestmentValues.Count}
-- Investment breakdown:
-{FormatInvestmentData(portfolioData.InvestmentValues)}
+            Portfolio data:
+            - Total Portfolio Value: {portfolioData.TotalValue}
+            - Number of investments: {portfolioData.InvestmentValues.Count}
+            - Investment breakdown:
+            {FormatInvestmentData(portfolioData.InvestmentValues)}
 
-Format your response in JSON with the following structure:
-{{
-  ""recommendations"": [""recommendation1"", ""recommendation2"", ""recommendation3""],
-  ""predictions"": [""prediction1"", ""prediction2""]
-}}
+             IMPORTANT: Your response MUST be a valid JSON in the following EXACT format:
+            {{
+              ""recommendations"": [""recommendation1"", ""recommendation2"", ""recommendation3""],
+              ""predictions"": [""prediction1"", ""prediction2""]
+            }}
 
-Your recommendations should be specific, actionable and based on the portfolio composition.
-Your predictions should be balanced and realistic.
-";
+            Your recommendations should be specific, actionable and based on the portfolio composition.
+            Your predictions should be balanced and realistic.
+           ";
         }
 
         /// <summary>
@@ -206,6 +206,9 @@ Your predictions should be balanced and realistic.
         {
             try
             {
+                // First, clean up unnecessary characters
+                openAiResponse = openAiResponse.Trim('`', '\n', ' ');
+
                 // Attempt to parse the JSON response
                 using var doc = JsonDocument.Parse(openAiResponse);
                 var root = doc.RootElement;
@@ -249,21 +252,66 @@ Your predictions should be balanced and realistic.
             {
                 _logger.LogError(ex, "Error parsing OpenAI response: {Response}", openAiResponse);
 
-                // If parsing fails, return default recommendations
-                return new InvestmentAdviceDto
+                // Alternatively, try manual parsing if JSON parsing fails
+                try
                 {
-                    Recommendations = new List<string>
+                    // Manually extract JSON format
+                    var recommendationsMatch = System.Text.RegularExpressions.Regex.Match(openAiResponse,
+                        @"""recommendations"":\s*\[(.*?)\]", System.Text.RegularExpressions.RegexOptions.Singleline);
+                    var predictionsMatch = System.Text.RegularExpressions.Regex.Match(openAiResponse,
+                        @"""predictions"":\s*\[(.*?)\]", System.Text.RegularExpressions.RegexOptions.Singleline);
+
+                    var recommendations = recommendationsMatch.Success
+                        ? recommendationsMatch.Groups[1].Value.Split(',')
+                            .Select(r => r.Trim('"', ' '))
+                            .ToList()
+                        : new List<string>();
+
+                    var predictions = predictionsMatch.Success
+                        ? predictionsMatch.Groups[1].Value.Split(',')
+                            .Select(p => p.Trim('"', ' '))
+                            .ToList()
+                        : new List<string>();
+
+                    return new InvestmentAdviceDto
                     {
-                        "Consider diversifying your investment portfolio.",
-                        "Review your asset allocation regularly.",
-                        "Ensure you have sufficient liquidity for unexpected expenses."
-                    },
-                    Predictions = new List<string>
+                        Recommendations = recommendations.Any()
+                            ? recommendations
+                            : new List<string>
+                            {
+                                "Consider diversifying your investment portfolio.",
+                                "Review your asset allocation regularly.",
+                                "Ensure you have sufficient liquidity for unexpected expenses."
+                            },
+                        Predictions = predictions.Any()
+                            ? predictions
+                            : new List<string>
+                            {
+                                "Market volatility may continue in the coming months.",
+                                "Economic indicators suggest cautious optimism for growth sectors."
+                            }
+                    };
+                }
+                catch (Exception parseEx)
+                {
+                    _logger.LogError(parseEx, "Failed to parse OpenAI response");
+
+                    // If all parsing fails, return default recommendations
+                    return new InvestmentAdviceDto
                     {
-                        "Market volatility may continue in the coming months.",
-                        "Economic indicators suggest cautious optimism for growth sectors."
-                    }
-                };
+                        Recommendations = new List<string>
+                        {
+                            "Consider diversifying your investment portfolio.",
+                            "Review your asset allocation regularly.",
+                            "Ensure you have sufficient liquidity for unexpected expenses."
+                        },
+                        Predictions = new List<string>
+                        {
+                            "Market volatility may continue in the coming months.",
+                            "Economic indicators suggest cautious optimism for growth sectors."
+                        }
+                    };
+                }
             }
         }
     }

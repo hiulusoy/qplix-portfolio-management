@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("qplix-portfolio-management.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed4136073e8f49a48caeb4e128e0a1b21ae4c9a7")]
 [assembly: System.Reflection.AssemblyProductAttribute("qplix-portfolio-management.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("qplix-portfolio-management.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -11,6 +11,17 @@ using qplix_portfolio_management.Infrastructure;
 // Create a new web application builder instance
 var builder = WebApplication.CreateBuilder(args);
 
+// CORS Policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllTraffic", policy =>
+    {
+        policy.WithOrigins("*")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
 // Configure Swagger documentation
 builder.Services.AddSwaggerGen(c =>
 {
@@ -53,6 +64,8 @@ if (app.Environment.IsDevelopment())
 }
 // Dummy commit
 
+app.UseCors("AllowAllTraffic");
+
 // Enforce HTTPS redirection for security
 app.UseHttpsRedirection();
 
@@ -63,6 +76,7 @@ app.MapGet("/ping", () => "Pong! Server is running");
 app.MapCityEndpoints(); // Register all city-related endpoints
 app.MapPortfolioEndpoints(); // Register all portfolio-related endpoints
 app.MapAIAdvisorEndpoints(); // Register all AI related endpoints
+app.MapInvestorEndpoints(); // Register all Investor related endpoints
 
 // Start the application
 app.Run();

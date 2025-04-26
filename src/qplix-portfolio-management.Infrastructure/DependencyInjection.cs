@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using qplix_portfolio_management.Application.Abstractions.Interfaces;
+using qplix_portfolio_management.Infrastructure.Abstractions;
 using qplix_portfolio_management.Infrastructure.Services;
 
 
@@ -10,7 +11,6 @@ namespace qplix_portfolio_management.Infrastructure
     {
         public static IServiceCollection RegisterExternalServices(this IServiceCollection services)
         {
-            // Register OpenAI advisor service
             services.AddScoped<IAiAdvisorService, OpenAIService>();
             return services;
         }
